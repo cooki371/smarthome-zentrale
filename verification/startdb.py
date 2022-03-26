@@ -6,5 +6,4 @@ db = mysql.connector.connect(
     password="dbuserPW"
 )
 
-
 print(db)
