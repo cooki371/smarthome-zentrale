@@ -6,6 +6,7 @@ Auf dem Pi müssen folgende Programme installiert sein:
     php (sudo apt install php php-mysql)
     mysql/MariaDB (sudo apt install mariodb-server)
     eventuell Python und Flask
+    Führe "pip install mysql-connector-python" aus
 
 GitHUB Webhook:
 Damit der Pi automatisch die Änderungen des GitHub Repositorys lädt, muss das Verzeichnis "/home/smarthome erstellt" sein, am besten
