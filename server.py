@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/payload", methods=['POST', 'GET'])
 def git_pull():
-    p = subprocess.Popen(['git', 'pull'], cwd='/home/pi/smarthome')
+    p = subprocess.Popen(['sudo', 'git', 'pull'], cwd='/home/pi/smarthome')
     p.wait()
     return "Done!"
 
