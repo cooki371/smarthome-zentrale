@@ -10,14 +10,14 @@ db = mysql.connector.connect(
 
 cursor = db.cursor()
 
-query = ("SELECT mail FROM user WHERE iduser>={}")
+query = ("SELECT mail, iduser FROM user WHERE iduser>={}")
 
 userid = 1
 
 cursor.execute(query.format(userid))
 
-for (mail) in cursor:
-    print(mail)
+for (mail,userid) in cursor:
+    print("Die Mail von user "+ userid + " ist " + mail)
 
 cursor.close()
 db.close()
