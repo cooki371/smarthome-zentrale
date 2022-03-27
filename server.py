@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/payload", methods=['POST', 'GET'])
 def git_pull():
-    p = subprocess.Popen(['git', 'pull'], cwd='/home/smarthome')
+    p = subprocess.Popen(['git', 'pull'], cwd='/home/pi/smarthome')
     p.wait()
     return "Done!"
 
@@ -30,7 +30,7 @@ def verify_user():
 
 @app.route("/testDB")
 def test_db():
-    testdb = subprocess.Popen(['python3', '/home/smarthome/verification/testdb.py'])
+    testdb = subprocess.Popen(['python3', '/home/pi/smarthome/verification/testdb.py'])
     testdb.wait()
     return startdb.db
 
