@@ -1,4 +1,4 @@
-import databaseconfig as dbcfg
+from verification import databaseconfig as dbcfg
 
 cursor = dbcfg.db.cursor()
 
