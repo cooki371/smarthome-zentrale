@@ -1,5 +1,5 @@
 import mysql.connector
-import config as cfg
+import .config as cfg
 
 db = mysql.connector.connect(
     host=cfg.database["host"],
