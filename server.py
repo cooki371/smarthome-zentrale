@@ -28,12 +28,5 @@ def verify_user():
     return "User is now verified"
 
 
-@app.route("/testDB")
-def test_db():
-    # testdb = subprocess.Popen(['python3', '/home/pi/smarthome/verification/testdb.py'])
-    # testdb.wait()
-    return startdb.db
-
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)

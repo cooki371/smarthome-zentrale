@@ -8,7 +8,3 @@ db = mysql.connector.connect(
 )
 
 print(db)
-
-
-def print_db():
-    return db
