@@ -2,7 +2,7 @@ import databaseconfig as dbcfg
 
 cursor = dbcfg.db.cursor()
 
-query = ("SELECT mail, iduser FROM user WHERE iduser>={}")
+query = "SELECT mail, iduser FROM user WHERE iduser>={}"
 
 userid = 1
 

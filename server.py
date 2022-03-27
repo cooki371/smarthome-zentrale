@@ -1,6 +1,6 @@
 from flask import Flask
 import subprocess
-from verification import databaseconfig
+from verification import start_verification as verification
 
 app = Flask(__name__)
 
@@ -18,8 +18,9 @@ def reboot_system():
     return "Das Gerät wird neu gestartet!"
 
 
-@app.route("/startVerify", methods=["POST"])
-def start_verification():
+@app.route("/startVerify/<mail>", methods=["POST", "GET"])
+def start_verification(mail):
+    verification.startVerify(mail)
     return "Verification satrted"
 
 
