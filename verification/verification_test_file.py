@@ -16,8 +16,8 @@ userid = 0
 
 cursor.execute(query.format(userid))
 
-for (iduser, mail, verified) in cursor:
-    print("{} {} {}".format(iduser, mail, verified))
+for (mail) in cursor:
+    print("{}".format(mail))
 
 cursor.close()
 db.close()
