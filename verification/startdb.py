@@ -1,11 +1,11 @@
 import mysql.connector
-import config
+import ./config as cfg
 
 db = mysql.connector.connect(
-    host=config.database["host"],
-    user=config.database["user"],
-    password=config.database["password"],
-    db=config.database["db"]
+    host=cfg.database["host"],
+    user=cfg.database["user"],
+    password=cfg.database["password"],
+    db=cfg.database["db"]
 )
 
 print(db)
