@@ -5,7 +5,7 @@ db = mysql.connector.connect(
     host=cfg.database["host"],
     user=cfg.database["user"],
     password=cfg.database["password"],
-    database=cfg.database["db"]
+    db=cfg.database["db"]
 )
 
 cursor = db.cursor()
