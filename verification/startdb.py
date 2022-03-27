@@ -1,10 +1,11 @@
 import mysql.connector
+import config
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="dbuser",
-    password="dbuserPw",
-    db="smarthome"
+    host=config.database["host"],
+    user=config.database["user"],
+    password=config.database["password"],
+    db=config.database["db"]
 )
 
 print(db)
