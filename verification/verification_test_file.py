@@ -10,7 +10,7 @@ db = mysql.connector.connect(
 
 cursor = db.cursor()
 
-query = ("SELECT mail FROM user WHERE iduser={}")
+query = ("SELECT mail FROM user WHERE iduser>={}")
 
 userid = 1
 
