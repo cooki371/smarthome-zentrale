@@ -1,6 +1,6 @@
 from flask import Flask
 import subprocess
-from verification import startdb
+from verification import databaseconfig
 
 app = Flask(__name__)
 

@@ -1,8 +1,6 @@
-import mysql.connector
-import databaseconfig as cfg
-import startdb as db
+import databaseconfig as dbcfg
 
-cursor = db.db.cursor()
+cursor = dbcfg.db.cursor()
 
 query = ("SELECT mail, iduser FROM user WHERE iduser>={}")
 
