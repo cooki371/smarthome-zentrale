@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.Popen('server.py')
+subprocess.Popen(['sudo','python3','server.py'])
