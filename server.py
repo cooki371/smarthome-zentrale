@@ -30,7 +30,8 @@ def verify_user():
 
 @app.route("/testDB")
 def test_db():
-    subprocess.Popen(['python3', '/home/smarthome/verification/testdb.py'])
+    testdb = subprocess.Popen(['python3', '/home/smarthome/verification/testdb.py'])
+    testdb.wait()
     return startdb.db
 
 
