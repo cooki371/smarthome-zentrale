@@ -17,7 +17,7 @@ userid = 1
 cursor.execute(query.format(userid))
 
 for (mail) in cursor:
-    print("{}".format(mail))
+    print(mail)
 
 cursor.close()
 db.close()
