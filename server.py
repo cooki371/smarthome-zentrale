@@ -12,13 +12,10 @@ def git_pull():
     return "Done!"
 
 
-@app.route("/reboot/<id>", methods=["GET"])
-def reboot_system(id):
-    if id == 371:
-        subprocess.Popen(["sudo", "reboot"])
-        return "Das Gerät wird neu gestartet!"
-    else:
-        return "Falsche PIN"
+@app.route("/reboot", methods=["GET"])
+def reboot_system():
+    subprocess.Popen(["sudo", "reboot"])
+    return "Das Gerät wird neu gestartet!"
 
 
 @app.route("/startVerify/<mail>", methods=["POST", "GET"])
