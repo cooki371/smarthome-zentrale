@@ -5,14 +5,14 @@ db = mysql.connector.connect(
     host=cfg.database["host"],
     user=cfg.database["user"],
     password=cfg.database["password"],
-    db=cfg.database["db"]
+    database=cfg.database["db"]
 )
 
 cursor = db.cursor()
 
 query = ("SELECT mail FROM user WHERE iduser={}")
 
-userid = 0
+userid = 1
 
 cursor.execute(query.format(userid))
 
