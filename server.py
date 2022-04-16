@@ -1,6 +1,6 @@
 from flask import Flask
 import subprocess
-from verification import start_verification as verification
+from verification import verification
 
 app = Flask(__name__)
 
