@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import subprocess
 from verification import verification
 
@@ -23,10 +23,11 @@ def start_verification(mail):
     verification.startVerify(mail)
     return "Verification satrted"
 
-
 @app.route("/verify", methods=["GET"])
 def verify_user():
-    return "User is now verified"
+    user = request.args.get('id')
+    hashed = request.args.get('h')
+    # verification.verify(user, hashed)
 
 
 if __name__ == "__main__":
