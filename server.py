@@ -12,10 +12,10 @@ def git_pull():
     return "Done!"
 
 
-@app.route("/reboot", methods=["GET"])
-def reboot_system():
-    subprocess.Popen(["sudo", "reboot"])
-    return "Das Gerät wird neu gestartet!"
+# @app.route("/reboot", methods=["GET"])
+# def reboot_system():
+#     subprocess.Popen(["sudo", "reboot"])
+#     return "Das Gerät wird neu gestartet!"
 
 
 @app.route("/startVerify/<mail>", methods=["POST", "GET"])
